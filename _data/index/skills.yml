@@ -1,0 +1,14 @@
+# skills section data
+- name: PHP
+  percentage: 50
+
+- name: Python
+  percentage: 40
+
+- name: HTML/CSS
+  percentage: 50
+
+- name: jQuery
+  percentage: 30
+
+
