@@ -11,7 +11,7 @@ img_path: /homepage/static/assets/img/blog  # url should be changed to '/homepag
 
 # author -- index page "about me" section
 author:  # change following line to your infomation.
-  name: GitHub  # Be used at blog posts' author.
+  name: OSSidorenkov  # Be used at blog posts' author.
   first_name: Oleg  # Be used at index page about me section.
   last_name: Sidorenkov  # Be used at index page about me section.
   cv:   # A online CV can be printed as PDF, leave blank if you don't have now
