@@ -23,8 +23,8 @@ tmpfs                     906M            0  906M            0% /sys/fs/cgroup
 /dev/sda2                 494M         159M  336M           33% /boot
 /dev/sda1                 200M         9,5M  191M            5% /boot/efi
 tmpfs                     182M            0  182M            0% /run/user/0
- 
- 
+```
+```
 root /home/OSSidorenkov # fdisk -l
 Disk /dev/sda: 161.1 GB, 161061273600 bytes, 314572800 sectors
 Units = sectors of 1 * 512 = 512 bytes
@@ -39,7 +39,6 @@ Disk /dev/mapper/centos-root: 133.5 GB, 133475336192 bytes, 260694016 sectors
 Units = sectors of 1 * 512 = 512 bytes
 Sector size (logical/physical): 512 bytes / 4096 bytes
 I/O size (minimum/optimal): 4096 bytes / 4096 bytes
- 
 Disk /dev/mapper/centos-swap: 2147 MB, 2147483648 bytes, 4194304 sectors
 Units = sectors of 1 * 512 = 512 bytes
 Sector size (logical/physical): 512 bytes / 4096 bytes
