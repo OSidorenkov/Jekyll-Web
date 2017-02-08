@@ -1,29 +1,57 @@
 # careers section data
 # if you don't have language feature(language.yml is empty), ignore "i18n" items
 - name:
-    detail: Company A
-    i18n: company_a
+    detail: Sberbank
+    i18n: company_c
   desc:
-    detail: I worked at Company A ...
-    i18n: company_a_desc
+    detail: Now I am working in the largest Bank of the country where escort highload services. In my spare time I write microservices to automate processes within the company.
+    i18n: company_c_desc
   date:
-    detail: Apr. 2016
-    i18n: company_a_date
+    detail: Nov. 2015
+    i18n: company_c_date
   job:
-    detail: CTO
-    i18n: company_a_job
-  icon: fa-plus-square
+    detail: System Administrator
+    i18n: company_c_job
+  icon: fa fa-university
 
 - name:
-    detail: Company B
+    detail: Flexidengi
+    i18n: company_c
+  desc:
+    detail: In Flexidengi, I accompanied the integration of payment methods on the partner services. During this time I have acquired skills in testing, Linux, MySQL. I monitored for the technical documentation update.
+    i18n: company_c_desc
+  date:
+    detail: Nov. 2014
+    i18n: company_c_date
+  job:
+    detail: Lead Project Engineer
+    i18n: company_c_job
+  icon: fa-credit-card
+
+- name:
+    detail: SMX Communications
+    i18n: company_a
+  desc:
+    detail: At November 2013, I was promoted to technical support specialist. During the work, I met with the database, the SQL learned. Later, I began to study the Linux system, and analyzed the problem of the service infrastructure.
+    i18n: company_a_desc
+  date:
+    detail: Nov. 2013
+    i18n: company_a_date
+  job:
+    detail: Technical Support
+    i18n: company_a_job
+  icon: fa-life-ring
+
+- name:
+    detail: SMX Communications
     i18n: company_b
   desc:
-    detail: I worked at Company B ...
+    detail: I worked at SMXCOM in this position for three months. During this time I became acquainted with the company's products, users consulted in the sphere of services.
     i18n: company_b_desc
   date:
-    detail: Jun. 2015
+    detail: Sep. 2013
     i18n: company_b_date
   job:
-    detail: Full Stack Developer
+    detail: Call Centre Operator
     i18n: company_b_job
-  icon: fa-plus-square
+  icon: fa-headphones

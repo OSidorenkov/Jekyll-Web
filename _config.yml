@@ -1,12 +1,12 @@
 # Welcome to Jekyll!
 
 # Website settings
-title: Bushido
-description: Jack's blog,use Jekyll and github pages.
-keywords: Jack,Jalpc,blog,Jekyll,github,gh-pages
+title: Sysadmin Diaries
+description: Sysadmin's blog,use Jekyll and github pages.
+keywords: Bushido,blog,блог сисадмина, дневник сисадмина,sysadmin bog,Jekyll,github,gh-pages
 baseurl:  /homepage # if you have suburl as homepage like '/homepage', please change it to '/homepage'
-url: http://jarrekk.github.io/Jalpc  # url should be changed to 'http://www.jack003.com/homepage' as before
-# url: http://127.0.0.1:4000
+url: https://osidorenkov.github.io/homepage  # url should be changed to 'http://www.jack003.com/homepage' as before
+# url: http://192.168.110.36:4000/homepage/
 img_path: /homepage/static/assets/img/blog  # url should be changed to '/homepage/static/assets/img/blog' as before
 
 # author -- index page "about me" section
@@ -20,22 +20,25 @@ author:  # change following line to your infomation.
   github_username: OSidorenkov  # Leave blank if you don't have now
   avatar: /static/assets/img/landing/xuyak.png  # upload your avatar at directory and edit it.
   skill_icon1:
-    - name: icon-apache
-    - name: fa-linux
+    - name: icon-nginx
+    - name: icon-centos
+    # - name: icon-laravel
   skill_icon2:
     - name: fa-linux
-    - name: icon-apache
+    # - name: icon-shell
+    - name: icon-postgres
   desc: System administartor.
 
 # comment
 disqus:  # if you wanna comment feature, go to https://disqus.com/ to get your configuration; if not, comment following two lines.
-  name: jalpc
-  public_key: tj2MPaNlHMONwTH5bGDNSXyaBpW7q282MeUzh5CwcjJerNhK8Kxk3aWo7IckzTX7
+  name: https-osidorenkov-github-io
+  #public_key: tj2MPaNlHMONwTH5bGDNSXyaBpW7q282MeUzh5CwcjJerNhK8Kxk3aWo7IckzTX7
+  public_key: nXoxlRIPdu4f9h3z7XIba7WS2I0gvm7dR2OslOrgqHo9smLUlTl4LlSF0JxVaIIO
 
 # analytics
 ## google analytics
 ga:  # if you wanna this feature, go to https://www.google.com/analytics/ to get your configuration; if not, comment following line.
-  # id:
+  id: UA-91651431-1
 
 ## growingIO
 gio:  # if you wanna this feature, go to https://www.growingio.com/ to get your configuration; if not, comment following line.
