@@ -9,6 +9,9 @@
 - name: Linux
   href: /linux/
 
+- name: Zabbix
+  href: /zabbix/
+
 - name: HTML
   href: /html/
 
