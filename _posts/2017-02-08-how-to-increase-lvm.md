@@ -61,6 +61,7 @@ I/O size (minimum/optimal): 4096 bytes / 4096 bytes
 `yum install gdisk -y`
 
 Создаем раздел: 
+
 ```
 #root /home/OSSidorenkov # gdisk /dev/sda
 GPT fdisk (gdisk) version 0.8.6
@@ -103,6 +104,7 @@ The new table will be used at the next reboot.
 The operation has completed successfully.
 ```
 Здесь видно, что партиция создалась, но не то что хотелось.. так что проделываем ту же операцию еще раз: 
+
 ```
 root /home/OSSidorenkov # gdisk /dev/sda
 GPT fdisk (gdisk) version 0.8.6
@@ -145,18 +147,21 @@ The operation has completed successfully.
 
 Теперь же видно, что то самое свободное пространство, которое нам нужно, наконец сформировано в 5 партиции. Ребутим виртуальную машину, после чего начнем работу по расширению пространства. 
 Теперь необходимо создать физический том sda5:
+
 ```
 # pvcreate /dev/sda5
   Physical volume "/dev/sda5" successfully created
 ```
 
 Далее расширяем группу томов, на новое пространство. Используем наше имя группы томов centos, которое мы подсмотрели ранее, командой df: 
+
 ```
 # vgextend /dev/centos /dev/sda5
   Volume group "centos" successfully extended
 ```
 
 Теперь расширим логический том. Вспоминаем, что говорил нам df. 
+
 ```
 # lvextend -l+100%FREE /dev/centos/root
   Size of logical volume centos/root changed from 124,31 GiB (31823 extents) to 147,31 GiB (37711 extents).
@@ -164,6 +169,7 @@ The operation has completed successfully.
 ```
 
 Еще пару волшебных действий для активации: 
+
 ```
 # vgscan
   Reading all physical volumes.  This may take a while...
@@ -173,6 +179,7 @@ The operation has completed successfully.
 ```
 
 И последнее, что мы делаем - расширяем файловую систему: 
+
 ```
 # resize2fs /dev/centos/root
 resize2fs 1.42.9 (28-Dec-2013)
@@ -182,6 +189,7 @@ The filesystem on /dev/centos/root is now 38616064 blocks long.
 ```
 
 Для CentOS 7 с файловой системой xfs используйте xfs_growfs вместо resize2fs. Данный процесс может занять некоторе время. После завершения операции проверим чего мы натворили: 
+
 ```
 # df -h
 Файловая система        Размер Использовано  Дост Использовано% Cмонтировано в
