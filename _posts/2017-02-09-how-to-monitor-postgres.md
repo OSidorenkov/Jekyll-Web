@@ -17,20 +17,24 @@ Mamonsu - представляет собой активный Zabbix агент
 ### Installation
 Начнем с установки самого плагина. Вариантов масса:  
 1. Install via pip:  
+
 ```bash
 $ pip install mamonsu
 ```
 2. Install from git:  
+
 ```bash
 $ git clone ... && cd mamonsu && python setup.py build && python setup.py install
 ```
 3. Build rpm:  
+
 ```bash
 $ yum install make rpm-build python2-devel python-setuptools
 $ git clone ... && cd mamonsu && make rpm && rpm -i mamonsu*.rpm
 ```
 
 Для Windows:  
+
 ```
 $ git clone ... && cd mamonsu && python setup_win32.py py2exe
 $ cp dist\{mamonsu, service_win32}.exe c:\mamonsu
@@ -40,6 +44,7 @@ $ net start mamonsu
 ```
 
 Я заметил один недостаток у этих методов, что почему то в них не прописано создание системных папок, например, таких как: `/etc/mamonsu`. Я выбрал такой:  
+
 ```bash
 curl -s https://packagecloud.io/install/repositories/postgrespro/mamonsu/script.rpm.sh | sudo bash
 sudo yum install mamonsu-2.2.9-1.el7.centos.noarch
@@ -47,6 +52,7 @@ sudo yum install mamonsu-2.2.9-1.el7.centos.noarch
 <br>
 ### Configure
 Далее, приступаем к настройке. Начинаем с того, что скачаем шаблон для Zabbix. Разработчики вновь предлагают нам варианты на выбор:  
+
 ```bash
 $ mamonsu export template template.xml --add-plugins /etc/mamonsu/plugins
 or
@@ -54,25 +60,29 @@ $ wget https://raw.githubusercontent.com/postgrespro/mamonsu/master/packaging/co
 or
 $ cp /usr/share/mamonsu/template.xml .
 ```
-  
+
 
 Импортируем шаблон в web-интерфейс Zabbix консольной командой плагина(можно и ручками: Configuration => Templates => Import):  
+
 ```bash
 $ mamonsu zabbix template export /usr/share/mamonsu/template.xml --url=http://zabbix.ru/ --user=Admin --password=zabbix
 ```
 
 Добавляем шаблон к машине, опять же плагин позволяет это сделать прямо с консоли:
+
 ```bash
 $ mamonsu zabbix host create <client name> <hostgroup id> <template id> <ip> --url=http://zabbix.ru/ --user=Admin --password=zabbix
 ```
 О там, как взять id, я расскажу ниже.  
 
 Генерируем конфиг плагина(если он не был предустановлен в `/etc/mamonsu/`):
+
 ```bash
 $ mamonsu export config /etc/mamonsu/agent.conf --add-plugins /etc/mamonsu/plugins
 ```
 
 Приводим конфиг к такому содержанию:  
+
 ```
 $ vim /etc/mamonsu/agent.conf
 
@@ -104,6 +114,7 @@ level = INFO
 ```
 
 Если хотите снимать метрики с других БД без привелегий суперпользователей, используйте Bootstrap DDL:  
+
 ```
 $ createdb mamonsu
 $ createuser mamonsu
@@ -311,12 +322,15 @@ $ mamonsu zabbix item error <host name>
 $ mamonsu zabbix item lastvalue <host name>
 $ mamonsu zabbix item lastclock <host name>
 ```
+
 <br>
 ### Пример дашборда Grafana
 
 <img src="{{ site.img_path }}/postgresql_zabbix/grafana_1.JPG" width="100%">
 <img src="{{ site.img_path }}/postgresql_zabbix/grafana_2.JPG" width="100%">
 <img src="{{ site.img_path }}/postgresql_zabbix/grafana_2.JPG" width="100%">
-
+  
+<br>
+Нативно шаблон Zabbix отображает множество графиков, но если вы хотите наблюдать за красотой в Grafana, вы можете использовать мой [Dashboard](https://github.com/OSidorenkov/grafana-dashboards).
 
 

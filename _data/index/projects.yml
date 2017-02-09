@@ -27,9 +27,16 @@
   img: /static/assets/img/landing/Fazie69-League-Of-Legends-Brand.png
   desc: The best library of two high skill levell summoners on RU server.
 
-- name: Zabbix in Telegram
+# - name: Zabbix in Telegram
+#   i18n: leaueOfLegends-bot
+#   gh_user: ableev
+#   repo: Zabbix-in-Telegram
+#   img: /static/assets/img/landing/zabbix.png
+#   desc: Zabbix Notifications with graphs in Telegram. 
+
+- name: Grafana dashboards
   i18n: leaueOfLegends-bot
-  gh_user: ableev
-  repo: Zabbix-in-Telegram
-  img: /static/assets/img/landing/zabbix.png
-  desc: Zabbix Notifications with graphs in Telegram. 
+  gh_user: OSidorenkov
+  repo: grafana-dashboards
+  img: /static/assets/img/landing/grafana1.png
+  desc: The library of custom Grafana dashboards by myself.
