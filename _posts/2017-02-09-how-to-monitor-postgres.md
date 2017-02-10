@@ -18,71 +18,71 @@ Mamonsu - представляет собой активный Zabbix агент
 
 Начнем с установки самого плагина. Вариантов масса:  
 1. Install via pip:  
-~~~bash
+```bash
 $ pip install mamonsu
-~~~  
+```  
 2. Install from git:  
-~~~bash
+```bash
 $ git clone ... && cd mamonsu && python setup.py build && python setup.py install
-~~~  
+```  
 3. Build rpm:  
-~~~bash
+```bash
 $ yum install make rpm-build python2-devel python-setuptools
 $ git clone ... && cd mamonsu && make rpm && rpm -i mamonsu*.rpm
-~~~  
+```  
 
 Для Windows:  
 
-~~~
+```
 $ git clone ... && cd mamonsu && python setup_win32.py py2exe
 $ cp dist\{mamonsu, service_win32}.exe c:\mamonsu
 $ c:\mamonsu\mamonsu.exe -w c:\mamonsu\agent.conf
 $ c:\mamonsu\service_win32.exe -install
 $ net start mamonsu
-~~~
+```
 
 Я заметил один недостаток у этих методов, что почему то в них не прописано создание системных папок, например, таких как: `/etc/mamonsu`. Я выбрал такой:  
 
-~~~bash
+```bash
 curl -s https://packagecloud.io/install/repositories/postgrespro/mamonsu/script.rpm.sh | sudo bash
 sudo yum install mamonsu-2.2.9-1.el7.centos.noarch
-~~~
-<br>
+```  
+
 ## Configure ######
 
 Далее, приступаем к настройке. Начинаем с того, что скачаем шаблон для Zabbix. Разработчики вновь предлагают нам варианты на выбор:  
 
-~~~bash
+```bash
 $ mamonsu export template template.xml --add-plugins /etc/mamonsu/plugins
 or
 $ wget https://raw.githubusercontent.com/postgrespro/mamonsu/master/packaging/conf/template.xml
 or
 $ cp /usr/share/mamonsu/template.xml .
-~~~
+```
 
 
 Импортируем шаблон в web-интерфейс Zabbix консольной командой плагина(можно и ручками: Configuration => Templates => Import):  
 
-~~~bash
+```bash
 $ mamonsu zabbix template export /usr/share/mamonsu/template.xml --url=http://zabbix.ru/ --user=Admin --password=zabbix
-~~~
+```
 
 Добавляем шаблон к машине, опять же плагин позволяет это сделать прямо с консоли:
 
-~~~bash
+```bash
 $ mamonsu zabbix host create <client name> <hostgroup id> <template id> <ip> --url=http://zabbix.ru/ --user=Admin --password=zabbix
-~~~
+```
 О там, как взять id, я расскажу ниже.  
 
 Генерируем конфиг плагина(если он не был предустановлен в `/etc/mamonsu/`):
 
-~~~bash
+```bash
 $ mamonsu export config /etc/mamonsu/agent.conf --add-plugins /etc/mamonsu/plugins
-~~~
+```
 
 Приводим конфиг к такому содержанию:  
 
-~~~
+```
 $ vim /etc/mamonsu/agent.conf
 
 $ cat /etc/mamonsu/agent.conf
@@ -110,27 +110,27 @@ enabled = True
 [log]
 file = /var/log/mamonsu/agent.log
 level = INFO
-~~~
+```
 
 Если хотите снимать метрики с других БД без привелегий суперпользователей, используйте Bootstrap DDL:  
 
-~~~
+```
 $ createdb mamonsu
 $ createuser mamonsu
 $ mamonsu bootstrap -U postgres -d mamonsu
-~~~
-<br>
+```
+
 ## Run ######
 
-~~~
+```
 $ service mamonsu start
 or by hand:
 $ mamonsu -d -a /etc/mamonsu/plugins -c /etc/mamonsu/agent.conf -p /var/run/mamonsu.pid
-~~~
-<br>
+```
+
 ## Metrics: PostgreSQL ######
 
-~~~
+```
 'PostgreSQL: ping': pgsql.ping[]
 'PostgreSQL: service uptime': pgsql.uptime[]
 'PostgreSQL: cache hit ratio': pgsql.cache[hit]
@@ -204,11 +204,11 @@ $ mamonsu -d -a /etc/mamonsu/plugins -c /etc/mamonsu/agent.conf -p /var/run/mamo
 'Database {#DATABASE}: size': pgsql.database.size[{#DATABASE}]
 'Count of bloating tables in database: {#DATABASE}': pgsql.database.bloating_tables[{#DATABASE}]
 'Max age (datfrozenxid) in: {#DATABASE}': pgsql.database.bloating_tables[{#DATABASE}]
-~~~
-<br>
+```
+
 ## Metrics: Linux system ######
 
-~~~
+```
 'System uptime': system.uptime[]
 'System load average over 1 minute': system.la[1]
 'Processes: in state running': system.processes[running]
@@ -253,10 +253,10 @@ $ mamonsu -d -a /etc/mamonsu/plugins -c /etc/mamonsu/agent.conf -p /var/run/mamo
 'Net device {#NETDEVICE}: TX bytes/s': system.net.tx_bytes[{#NETDEVICE}]
 'Net device {#NETDEVICE}: TX errors/s': system.net.tx_errors[{#NETDEVICE}]
 'Net device {#NETDEVICE}: TX drops/s': system.net.tx_drops[{#NETDEVICE}]
-~~~
-<br>  
+```
+  
 ## Metrics: Windows system ######
-~~~
+```
 'Memory cached': system.memory[cache]
 'Memory available': system.memory[available]
 'Memory free': system.memory[free]
@@ -265,31 +265,31 @@ $ mamonsu -d -a /etc/mamonsu/plugins -c /etc/mamonsu/agent.conf -p /var/run/mamo
 'CPU privileged time': system.cpu[privileged_time]
 'Network bytes total': system.network[total_bytes]
 'Network output queue length': system.network[total_output_queue]
-~~~
-<br>
+```
+
 ## Tool: Report ######
 
 Утилита создает отчет об инфраструктуре сервера и PostgreSQL:  
 `$ mamonsu report`  
-<br>
+
 ## Tool: Tune ######
 
 Делает общую оптимизацию систему и PostgreSQL, на основе отчета:  
 `$ mamonsu tune`
-<br>
+
 ## Tool: analog of zabbix_get ######
 
-~~~
+```
 $ mamonsu agent version
 $ mamonsu agent metric-list
 $ mamonsu agent metric-get <key>
-~~~
-<br>
+```
+
 ## Tool: Zabbix CLI ######
 
 Консольные команды для Zabbix сервера:  
 
-~~~
+```
 $ export ZABBIX_USER=Admin
 $ export ZABBIX_PASSWD=zabbix
 $ export ZABBIX_URL='http://localhost/zabbix'
@@ -319,16 +319,16 @@ $ mamonsu zabbix hostgroup create <hostgroup name>
 $ mamonsu zabbix item error <host name>
 $ mamonsu zabbix item lastvalue <host name>
 $ mamonsu zabbix item lastclock <host name>
-~~~
+```
 
-<br>
+
 ## Пример дашборда Grafana ######
  
 <img src="{{ site.img_path }}/postgresql_zabbix/grafana_1.JPG" width="100%">
 <img src="{{ site.img_path }}/postgresql_zabbix/grafana_2.JPG" width="100%">
 <img src="{{ site.img_path }}/postgresql_zabbix/grafana_2.JPG" width="100%">
   
-<br>
+
 Нативно шаблон Zabbix отображает множество графиков, но если вы хотите наблюдать за красотой в Grafana, вы можете использовать мой [Dashboard](https://github.com/OSidorenkov/grafana-dashboards).
 
 
