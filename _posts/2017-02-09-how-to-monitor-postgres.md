@@ -14,21 +14,21 @@ icon: fa fa-television
 
 Mamonsu - представляет собой активный Zabbix агент, в котором учтены и исправлены недостатки большинства других систем мониторинга и сбора метрик для PostgreSQL. Он плагинный, хорошо расширяемый, кроссплатформенный, помимо PostgreSQL он снимает метрики с системы; устанавливается с настройками, наиболее оптимальными для использования, по умолчанию; не требует повышенных привилегий.  
 
-### Installation
+### Installation  
 Начнем с установки самого плагина. Вариантов масса:  
-1. Install via pip:
+1. Install via pip:  
 ```bash
 $ pip install mamonsu
-```
-2. Install from git:
+```  
+2. Install from git:  
 ```bash
 $ git clone ... && cd mamonsu && python setup.py build && python setup.py install
-```
-3. Build rpm:
+```  
+3. Build rpm:  
 ```bash
 $ yum install make rpm-build python2-devel python-setuptools
 $ git clone ... && cd mamonsu && make rpm && rpm -i mamonsu*.rpm
-```
+```  
 
 Для Windows:  
 
