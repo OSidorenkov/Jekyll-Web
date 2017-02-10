@@ -13,21 +13,18 @@ icon: fa fa-television
 Да, так было до недавнего времени, пока не появились некие ребята от компании Postgres Professional и не запилили плагин на python [Mamonsu](https://github.com/postgrespro/mamonsu).  
 
 Mamonsu - представляет собой активный Zabbix агент, в котором учтены и исправлены недостатки большинства других систем мониторинга и сбора метрик для PostgreSQL. Он плагинный, хорошо расширяемый, кроссплатформенный, помимо PostgreSQL он снимает метрики с системы; устанавливается с настройками, наиболее оптимальными для использования, по умолчанию; не требует повышенных привилегий.  
-<br>
+
 ### Installation
 Начнем с установки самого плагина. Вариантов масса:  
-1. Install via pip:  
-
+1. Install via pip:
 ```bash
 $ pip install mamonsu
 ```
-2. Install from git:  
-
+2. Install from git:
 ```bash
 $ git clone ... && cd mamonsu && python setup.py build && python setup.py install
 ```
-3. Build rpm:  
-
+3. Build rpm:
 ```bash
 $ yum install make rpm-build python2-devel python-setuptools
 $ git clone ... && cd mamonsu && make rpm && rpm -i mamonsu*.rpm
