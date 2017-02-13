@@ -165,4 +165,5 @@ emoji_map = {
 Полезные ссылки:	
 * Сообщество по этому проекту в телеграм: [https://telegram.me/ZbxTg](https://telegram.me/ZbxTg)
 
-* Новости по обновлению проекта: [https://telegram.me/Zabbix_in_Telegram](https://telegram.me/Zabbix_in_Telegram)
+* Новости по обновлению проекта: [https://telegram.me/Zabbix_in_Telegram](https://telegram.me/Zabbix_in_Telegram)	
+```sudo -u zabbix /var/lib/zabbixsrv/alertscripts/zbxtg_channel.py "@TestZabbix" "Test" "$(echo -e 'zbxtg;graphs\nzbxtg;itemid:28458\nzbxtg;debug\nzbxtg;title:test')" --channel```
