@@ -69,7 +69,7 @@ emoji_map = {
 
 	<img src="{{ site.img_path }}/telegram_zabbix/image2.png">
 
-	* Текст о проблеме:  
+	* Текст о проблеме:
 	```
 	Last value:{ITEM.VALUE1} ({TIME})
 	zbxtg;graphs
@@ -82,7 +82,7 @@ emoji_map = {
 	{TRIGGER.DESCRIPTION}
 	```
 
-	* Сообщение о восстановлении:	
+	* Сообщение о восстановлении:
 	```
 	Server: {HOSTNAME} ({HOST.IP})
 	Описание:
@@ -155,9 +155,10 @@ emoji_map = {
 
 ```sudo -u zabbix /var/lib/zabbixsrv/alertscripts/zbxtg_channel.py "@TestZabbix" "Test" "$(echo -e 'zbxtg;graphs\nzbxtg;itemid:28458\nzbxtg;debug\nzbxtg;title:test')" --channel```		
 
+
 Ссылка на первоисточник:	
-[https://github.com/ableev/Zabbix-in-Telegram](https://github.com/ableev/Zabbix-in-Telegram)	
-Переходите и не забудьте оценить проект звездочкой на GitHub.	
+[https://github.com/ableev/Zabbix-in-Telegram](https://github.com/ableev/Zabbix-in-Telegram)  
+Переходите и не забудьте оценить проект звездочкой на GitHub.  
 Полезные ссылки:  
 
 * Сообщество по этому проекту в телеграм: [https://telegram.me/ZbxTg](https://telegram.me/ZbxTg)
