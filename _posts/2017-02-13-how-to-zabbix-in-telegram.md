@@ -156,3 +156,12 @@ emoji_map = {
 ### Тест отправки графика в канал
 
 ```sudo -u zabbix /var/lib/zabbixsrv/alertscripts/zbxtg_channel.py "@TestZabbix" "Test" "$(echo -e 'zbxtg;graphs\nzbxtg;itemid:28458\nzbxtg;debug\nzbxtg;title:test')" --channel```
+
+<br>
+
+Ссылка на первоисточник:	
+[https://github.com/ableev/Zabbix-in-Telegram](https://github.com/ableev/Zabbix-in-Telegram)	
+Переходите и не забудьте оценить проект звездочкой на GitHub.	
+Полезные ссылки:	
+* Сообщество по этому проекту в телеграм: [https://telegram.me/ZbxTg](https://telegram.me/ZbxTg)
+* Новости по обновлению проекта: [https://telegram.me/Zabbix_in_Telegram](https://telegram.me/Zabbix_in_Telegram)
