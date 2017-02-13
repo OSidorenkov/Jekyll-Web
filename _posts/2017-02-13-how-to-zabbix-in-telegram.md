@@ -23,7 +23,7 @@ icon: fa fa-television
 `git clone https://github.com/ableev/Zabbix-in-Telegram.git`
 
 * Копируем `zbxtg.py` и `zbxtg_group.py` в _AlertScriptsPath_ директорию Zabbix, путь указан в zabbix_server.conf
-* Создаем `zbxtg_settings` в котором прописываете следующее:
+* Создаем `zbxtg_settings.py` в котором прописываете следующее:
 
 ```python
 # -*- coding: utf-8 -*-
@@ -70,7 +70,6 @@ emoji_map = {
 	<img src="{{ site.img_path }}/telegram_zabbix/image2.png">
 
 	* Текст о проблеме:  
-
 	```
 	Last value:{ITEM.VALUE1} ({TIME})
 	zbxtg;graphs
@@ -83,8 +82,7 @@ emoji_map = {
 	{TRIGGER.DESCRIPTION}
 	```
 
-	* Сообщение о восстановлении:
-
+	* Сообщение о восстановлении:	
 	```
 	Server: {HOSTNAME} ({HOST.IP})
 	Описание:
@@ -155,14 +153,13 @@ emoji_map = {
 
 ### Тест отправки графика в канал
 
-```sudo -u zabbix /var/lib/zabbixsrv/alertscripts/zbxtg_channel.py "@TestZabbix" "Test" "$(echo -e 'zbxtg;graphs\nzbxtg;itemid:28458\nzbxtg;debug\nzbxtg;title:test')" --channel```
-
-<br>
+```sudo -u zabbix /var/lib/zabbixsrv/alertscripts/zbxtg_channel.py "@TestZabbix" "Test" "$(echo -e 'zbxtg;graphs\nzbxtg;itemid:28458\nzbxtg;debug\nzbxtg;title:test')" --channel```		
 
 Ссылка на первоисточник:	
 [https://github.com/ableev/Zabbix-in-Telegram](https://github.com/ableev/Zabbix-in-Telegram)	
 Переходите и не забудьте оценить проект звездочкой на GitHub.	
-Полезные ссылки:	
+Полезные ссылки:  
+
 * Сообщество по этому проекту в телеграм: [https://telegram.me/ZbxTg](https://telegram.me/ZbxTg)
 
 * Новости по обновлению проекта: [https://telegram.me/Zabbix_in_Telegram](https://telegram.me/Zabbix_in_Telegram)	
