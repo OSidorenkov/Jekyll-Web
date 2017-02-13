@@ -69,7 +69,7 @@ emoji_map = {
 
 	<img src="{{ site.img_path }}/telegram_zabbix/image2.png">
 
-	* Текст о проблеме:
+	* Текст о проблеме:  
 ```
 Last value:{ITEM.VALUE1} ({TIME})
 zbxtg;graphs
@@ -82,7 +82,7 @@ Server: {HOSTNAME} ({HOST.IP})
 {TRIGGER.DESCRIPTION}
 ```
 
-	* Сообщение о восстановлении:
+	* Сообщение о восстановлении:  
 ```
 Server: {HOSTNAME} ({HOST.IP})
 Описание:
