@@ -70,8 +70,7 @@ emoji_map = {
 	<img src="{{ site.img_path }}/telegram_zabbix/image2.png">
 
 	* Текст о проблеме:  
-```
-Last value:{ITEM.VALUE1} ({TIME})
+```Last value:{ITEM.VALUE1} ({TIME})
 zbxtg;graphs
 zbxtg;graphs_period=1800
 zbxtg;itemid:{ITEM.ID1}
@@ -79,16 +78,13 @@ zbxtg;title:{HOST.HOST} - {TRIGGER.NAME}
 Важность триггера: {TRIGGER.SEVERITY}
 Server: {HOSTNAME} ({HOST.IP})
 Описание:
-{TRIGGER.DESCRIPTION}
-```
+{TRIGGER.DESCRIPTION}```
 
 	* Сообщение о восстановлении:  
-```
-Server: {HOSTNAME} ({HOST.IP})
+```Server: {HOSTNAME} ({HOST.IP})
 Описание:
 Проблема устранена!
-Время устранения проблемы: {DATE} {TIME}
-```
+Время устранения проблемы: {DATE} {TIME}```
 
 * Добавим пользователю нужный тип оповещения(в графе отправлять на используем chat_id канала, как его получить, читать ниже):  
 
