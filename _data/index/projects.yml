@@ -40,3 +40,10 @@
   repo: grafana-dashboards
   img: /static/assets/img/landing/grafana1.png
   desc: The library of custom Grafana dashboards by myself.
+
+- name: Ansible playbooks
+  i18n: ansible-play
+  gh_user: OSidorenkov
+  repo: ansible-playbook
+  img: /static/assets/img/landing/1507452.png
+  desc: My ansible playbooks for diferent projects.

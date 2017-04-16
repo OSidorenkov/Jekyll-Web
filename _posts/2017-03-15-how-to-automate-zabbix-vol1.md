@@ -203,6 +203,7 @@ zapi.usergroup.update(			 # Апдейтим группу пользовател
           port: "{{ zabbix_agent_port }}"
 {% endraw %}
 ```
+Информацию о том какие параметры доступны у данного модуля читайте в документации из ссылки выше.
 <br/>
 
 Ну и в конце плэйбука пишем обработчик на рестарт агента и включение в автозагрузку: 
@@ -239,3 +240,7 @@ pgsql3.prod.sgr.sber       : ok=12   changed=11   unreachable=0    failed=0
 <img src="{{ site.img_path }}/automate_zabbix/zab3.png" width="70%">
 
 Вуаля, хост появился, доступен, в нужных группах и прицеплен к шаблону. Красота!
+
+<br/>
+
+Полный playbook, а также скрипты и шаблоны, вы можете скачать с моего репозитория на [GitHub](https://github.com/OSidorenkov/ansible-playbook).
