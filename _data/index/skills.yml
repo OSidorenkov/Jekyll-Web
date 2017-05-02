@@ -1,14 +1,22 @@
 # skills section data
 - name: PHP
-  percentage: 50
+  percentage: 45
 
 - name: Python
-  percentage: 40
-
-- name: HTML/CSS
-  percentage: 50
-
-- name: jQuery
   percentage: 30
+
+- name: Linux
+  percentage: 75
+
+- name: Docker
+  percentage: 65
+
+- name: Zabbix
+  percentage: 90
+# - name: HTML/CSS
+#   percentage: 50
+
+# - name: jQuery
+#   percentage: 30
 
 
