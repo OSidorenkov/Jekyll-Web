@@ -63,11 +63,11 @@ emoji_map = {
 
 * Создаем новый "Способ оповещения" в веб-интерфейсе Zabbix c подобными параметрами:  
 
-	<img src="{{ site.img_path }}/telegram_zabbix/image1.png">
+	<img src="{{ site.img_path }}/telegram_zabbix/image1.png" class="image">
 
-* Создаем новое "Действие", напрмер:  
+* Создаем новое "Действие", например:  
 
-	<img src="{{ site.img_path }}/telegram_zabbix/image2.png">
+	<img src="{{ site.img_path }}/telegram_zabbix/image2.png" class="image">
 
 	* Текст о проблеме:  
     <details>
@@ -96,7 +96,7 @@ emoji_map = {
 
 * Добавим пользователю нужный тип оповещения(в графе отправлять на используем chat_id канала, как его получить, читать ниже):  
 
-<img src="{{ site.img_path }}/telegram_zabbix/image3.png">
+<img src="{{ site.img_path }}/telegram_zabbix/image3.png" class="image">
 
 <br>
 
@@ -123,7 +123,7 @@ emoji_map = {
 
 Создайте свой канал в клиенте Телеграм, затем у вас спросят выбрать тип(Публичный или приватный), нужно выбрать приватный, так как без этого мы не узнаем уникальный chatid, без которого будет невозможно понять куда отправлять оповещения боту.  
 
-<img src="{{ site.img_path }}/telegram_zabbix/image4.png">  
+<img src="{{ site.img_path }}/telegram_zabbix/image4.png" class="image">  
 
 В данном случае UserName канала является @ТestZabbix, добавляем туда нашего бота и делаем его администратором(для возможности отправки нотификаций). Затем чтобы получить chat_id открываем браузер и посылаем себе сообщение в канал от бота, используя API Telegram:  
 

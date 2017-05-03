@@ -145,4 +145,4 @@ deny all; #запрещаем просматривать страницу для
 
 Далее прикрепляем к нужному хосту шаблона Nginx (положу его сюда на всякий случай) и создаем макросы и необходимые значения, для работы триггеров.  
 Пример:  
-<img src="{{ site.img_path }}/nginx_zabbix/image1.JPG" width="40%">
+<img src="{{ site.img_path }}/nginx_zabbix/image1.JPG" width="40%" class="image">

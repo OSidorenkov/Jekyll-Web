@@ -8196,3 +8196,28 @@ body.rtls.top-navigation .footer.fixed {
 .rtls #right-sidebar.sidebar-open {
     left: 0
 }
+
+.image {
+  margin:20px;
+  //float:left;
+  cursor:pointer;
+  //max-height:100px;
+}
+
+.popup {
+  position: fixed;
+  height:100%;
+  width:100%;
+  top:0;
+  left:0;
+  z-index:2;
+  display:none;
+  text-align:center;
+  background:rgba(0,0,0,0.4);
+}
+
+.popup_img {
+  margin: 100px auto 0;
+  max-height:80%;
+  max-width:80%;
+}

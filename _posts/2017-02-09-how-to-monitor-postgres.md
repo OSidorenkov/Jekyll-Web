@@ -323,12 +323,13 @@ $ mamonsu zabbix item lastvalue <host name>
 $ mamonsu zabbix item lastclock <host name>
 ```
 
+<br/>
 
 ## Пример дашборда Grafana ######
  
-<img src="{{ site.img_path }}/postgresql_zabbix/grafana_1.JPG" width="100%">
-<img src="{{ site.img_path }}/postgresql_zabbix/grafana_2.JPG" width="100%">
-<img src="{{ site.img_path }}/postgresql_zabbix/grafana_2.JPG" width="100%">
+<img src="{{ site.img_path }}/postgresql_zabbix/grafana_1.JPG" width="50%" class="image">
+<img src="{{ site.img_path }}/postgresql_zabbix/grafana_2.JPG" width="50%" class="image">
+<img src="{{ site.img_path }}/postgresql_zabbix/grafana_2.JPG" width="50%" class="image">
   
 
 Нативно шаблон Zabbix отображает множество графиков, но если вы хотите наблюдать за красотой в Grafana, вы можете использовать мой [Dashboard](https://github.com/OSidorenkov/grafana-dashboards).

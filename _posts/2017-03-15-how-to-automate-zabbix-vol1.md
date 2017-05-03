@@ -168,7 +168,7 @@ zapi.usergroup.update(			 # Апдейтим группу пользовател
 
 На выходе получаем нечто подобное:
 
-<img src="{{ site.img_path }}/automate_zabbix/zab1.png" width="70%">
+<img src="{{ site.img_path }}/automate_zabbix/zab1.png" width="50%" class="image">
 
 <br/>
 
@@ -237,7 +237,7 @@ pgsql3.prod.sgr.sber       : ok=12   changed=11   unreachable=0    failed=0
 
 Идем проверяь хост в админку: 
 
-<img src="{{ site.img_path }}/automate_zabbix/zab3.png" width="70%">
+<img src="{{ site.img_path }}/automate_zabbix/zab3.png" width="50%" class="image">
 
 Вуаля, хост появился, доступен, в нужных группах и прицеплен к шаблону. Красота!
 

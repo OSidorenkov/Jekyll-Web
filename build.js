@@ -123,7 +123,8 @@ blogJsFilelist = [
 	'node_modules/pace-progress/pace.js',
 	'node_modules/wowjs/dist/wow.js',
 	'static/js/scroll.js',
-	'static/js/count.js'
+	'static/js/count.js',
+	'static/js/extand-image.js'
 	],
 compressjs(blogJsFilename, blogJsFilelist)
 
