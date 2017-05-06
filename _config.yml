@@ -4,10 +4,10 @@
 title: Sysadmin Diaries
 description: Sysadmin's blog,which covers solutions on the IT field.
 keywords: Bushido,blog,блог сисадмина, дневник сисадмина,sysadmin blog,Jekyll,github,gh-pages,devops,девопс  
-baseurl:  /homepage # if you have suburl as homepage like '/homepage', please change it to '/homepage'
-url: https://osidorenkov.github.io/homepage  # url should be changed to 'http://www.jack003.com/homepage' as before
+baseurl:  # if you have suburl as homepage like '/homepage', please change it to '/homepage'
+url: http://sys-admin.gq  # url should be changed to 'http://www.jack003.com/homepage' as before
 # url: http://192.168.110.36:4000/homepage/
-img_path: /homepage/static/assets/img/blog  # url should be changed to '/homepage/static/assets/img/blog' as before
+img_path: /static/assets/img/blog  # url should be changed to '/homepage/static/assets/img/blog' as before
 
 # author -- index page "about me" section
 author:  # change following line to your infomation.
