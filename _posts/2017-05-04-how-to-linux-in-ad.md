@@ -4,6 +4,7 @@ title:  "Linux + Active Directory"
 date:   2017-05-04
 description: Статья о том, как можно интегрировать Linux сервер в Active Directory, заходить на него под доменной учетной записью, а также управлять доступами на сервер через AD.
 keywords: "Linux,Active Directory,Linux + Active Directory,интеграция linux в active directory,sssd"
+url: https://osidorenkov.github.io/homepage
 image: /static/assets/img/blog/linux_ad/sshot518c059b37f74.jpg
 categories: [Linux]
 tags: [Linux,Active Directory]
