@@ -5,7 +5,7 @@ date:   2017-04-15
 desc: "Как я начал автоматизировать раскатку zabbix и добавление хостов по правильным группам"
 description: Как я начал автоматизировать раскатку zabbix с помощью ansible и добавлять хосты по правильным группам.
 keywords: "Zabbix,Автоматизация Zabbix,Zabbix мониторинг,Zabbix,мониторинг,Ansible Zabbix"
-image: /homepage/static/assets/img/blog/automate_zabbix/zabbixok.png
+image: /static/assets/img/blog/automate_zabbix/zabbixok.png
 categories: [Zabbix]
 tags: [Zabbix,Ansible,Мониторинг]
 icon: fa fa-television
