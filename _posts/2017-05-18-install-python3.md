@@ -14,9 +14,12 @@ icon: icon-python
 
 Сначала установите минимально необходимые инструменты:  
 
-`sudo yum groupinstall "Development Tools -y"`
+```
+sudo yum groupinstall "Development Tools" -y
+sudo yum install zlib zlib-devel -y
+```
 
-Теперь загрузите последнюю версию python3 (например, python 3.6) из https://www.python.org/ftp/python/.
+Теперь загрузите последнюю версию python3 (например, python 3.6) из [https://www.python.org/ftp/python/](https://www.python.org/ftp/python/).
 
 ```bash
 $ curl -O https://www.python.org/ftp/python/3.6.1/Python-3.6.1.tgz
