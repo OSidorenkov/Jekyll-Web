@@ -47,3 +47,10 @@
   repo: ansible-playbook
   img: /static/assets/img/landing/1507452.png
   desc: My ansible playbooks for diferent projects.
+
+- name: Zabbix jira
+  i18n: zabbix-jira
+  gh_user: OSidorenkov
+  repo: zabbix-jira
+  img: /static/assets/img/landing/zabbix.png
+  desc: Python module that allows you to create tasks in Jira with grafs by the trigger from Zabbix.
